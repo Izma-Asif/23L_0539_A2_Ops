@@ -1,0 +1,45 @@
+=== COUNTS PER CLASS (all files) ===
+class
+ai      539
+real    436
+
+=== width: min / median / max per class ===
+       min  median   max
+class                   
+ai     225  1024.0  6000
+real   183   920.0  8495
+
+=== height: min / median / max per class ===
+       min  median   max
+class                   
+ai     135   800.0  4001
+real   158   720.0  7091
+
+=== file_size: min / median / max per class ===
+         min    median       max
+class                           
+ai     11738  199760.0   5626183
+real   11311  144840.0  10195352
+
+=== FORMATS ===
+class  format
+ai     JPEG      429
+       PNG       110
+real   JPEG      403
+       PNG        33
+
+=== COLOUR MODES ===
+class  mode
+ai     L         1
+       P        14
+       RGB     489
+       RGBA     35
+real   L         6
+       P         9
+       RGB     407
+       RGBA     14
+
+Corrupt / unreadable files : 0
+Files in duplicate groups  : 2
+Extra copies (removable)   : 1
+Hashes present in BOTH classes: 0
