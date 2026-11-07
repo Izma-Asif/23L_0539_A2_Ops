@@ -7,13 +7,13 @@ from PIL import Image
 from sklearn.model_selection import train_test_split
 try:
     from tqdm import tqdm
-except ImportError:          # progress bar is optional
+except ImportError:         
     def tqdm(x, **kw):
         return x
 
 SEED = 42
 IMG_EXT = {".jpg", ".jpeg", ".png", ".bmp", ".gif", ".webp", ".tif", ".tiff"}
-# folder name -> (label name, integer label). AI-generated is the positive class (1).
+
 CLASSES = {"AiArtData": ("ai", 1), "RealArt": ("real", 0)}
 
 
@@ -29,11 +29,11 @@ def inspect(path):
     """Return width, height, mode, format, error. error is '' for a good file."""
     try:
         with Image.open(path) as im:
-            im.verify()                    # checks file integrity without decoding all pixels
-        with Image.open(path) as im:       # verify() invalidates the object, so reopen
-            im.load()                      # force a full decode to catch truncated files
+            im.verify()               
+        with Image.open(path) as im:      
+            im.load()                      
             return im.width, im.height, im.mode, im.format, ""
-    except Exception as e:                 # any failure = unreadable image
+    except Exception as e:               
         return None, None, None, None, f"{type(e).__name__}: {e}"
 
 
@@ -57,10 +57,10 @@ def main(data_dir, out_reports, out_splits):
     df.to_csv(out_reports / "audit.csv", index=False)
 
     good = df[~df["corrupt"]]
-    dup_mask = good.duplicated("sha256", keep=False)           # every member of a duplicate group
+    dup_mask = good.duplicated("sha256", keep=False)
     extra_copies = int(good.duplicated("sha256", keep="first").sum())
     cross = good.groupby("sha256")["class"].nunique()
-    cross_hashes = set(cross[cross > 1].index)                 # same bytes under both labels
+    cross_hashes = set(cross[cross > 1].index)
 
     lines = ["=== COUNTS PER CLASS (all files) ===", df["class"].value_counts().to_string(), ""]
     for col in ["width", "height", "file_size"]:
@@ -78,8 +78,6 @@ def main(data_dir, out_reports, out_splits):
     (out_reports / "summary.txt").write_text(summary)
     print("\n" + summary)
 
-    # Clean set: drop corrupt, drop hashes that appear under both labels (ambiguous),
-    # keep one copy of every other duplicate so no copy can leak across splits.
     clean = good[~good["sha256"].isin(cross_hashes)].drop_duplicates("sha256", keep="first")
     cols = ["path", "class", "label", "sha256"]
     train, rest = train_test_split(clean[cols], test_size=0.30, stratify=clean["label"], random_state=SEED)
