@@ -1,0 +1,7 @@
+conv1
+bn1
+conv2
+bn2
+conv3
+bn3
+prob_ai
