@@ -1,0 +1,11 @@
+path,class,label,sha256,p_ai,pred,conf
+data/RealArt/RealArt/what-color-paintings-sell-best.jpg,real,0,857b23ddf5e9a9d40a2eaab1e68413b1efb968adead38d27c7c7d23e806b7612,0.91446567,1,0.91446567
+data/AiArtData/AiArtData/B49447D3-BE5D-4A25-8505059961823425_source.jpg,ai,1,029a7041694aa23a63e285c6efb5287282f84878518dc3abbe4bb391340da0eb,0.10063851,0,0.8993615
+data/RealArt/RealArt/getty_511618259_186076.jpg,real,0,992c2707d51eb38026985fcc29891fd47d5799c58275c22c455b5a0c4b3f10f2,0.88784957,1,0.88784957
+data/RealArt/RealArt/231019-Yayoi-Kusama-ew-337p-647c5e.jpg,real,0,e2e477d2e79de0132b75a05c286de99432bb689fa48449dee8885f96260986e8,0.87465113,1,0.87465113
+data/AiArtData/AiArtData/elephant_topper_fallback.cb6ee071.png,ai,1,cb6ee07195d61fd0255f287610e1d629fd8604d7323969a474a8489544e70e6b,0.13162918,0,0.86837083
+data/AiArtData/AiArtData/Midjourney-River.jpg,ai,1,bda48f6e4fabc9e56599b189ed6df6fe1302e1bf0b3963bf1e5af546b8a8e7f2,0.14842232,0,0.8515777
+data/AiArtData/AiArtData/robot-art-for-web-1180x560.jpg,ai,1,05b74e72b19a93a0eb54f8de49ea587963295fd24424e0ae7e7ca89dac9b49e4,0.15789177,0,0.84210825
+data/RealArt/RealArt/images3.jpg,real,0,79ce6ec00685c46bd11f62cbfa9db5e5c874d43ea770466a27962a87beb18edb,0.8070344,1,0.8070344
+data/RealArt/RealArt/Women-clothing-Kenya-East-Africa.jpg,real,0,e1e3f9dca6ace7a72f6ade3e73c9c76c7adde58a11707e16754846a615660646,0.8022514,1,0.8022514
+data/AiArtData/AiArtData/timparkin_collage_composite_landscape_c209c0c0-18fd-4919-8efd-744fb451e9b8.jpg,ai,1,776574ba299afa231d39ae7457f0078bec4cccb994c2d7dedd47852d13b3a06e,0.21129772,0,0.78870225
