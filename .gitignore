@@ -5,3 +5,4 @@ __pycache__/
 mlruns/
 /data
 models/*.keras
+tuner_results/
