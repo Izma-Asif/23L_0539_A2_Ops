@@ -6,3 +6,7 @@ mlruns/
 /data
 models/*.keras
 tuner_results/
+mlruns/
+.env
+mlflow.db
+mlartifacts/
