@@ -17,12 +17,12 @@ class Prediction(Base):
     __tablename__ = "predictions"
     id: Mapped[int] = mapped_column(primary_key=True)
     timestamp: Mapped[datetime] = mapped_column(
-        DateTime, default=lambda: datetime.now(timezone.utc).replace(tzinfo=None)) 
-    filename: Mapped[str] = mapped_column(String(255))  
-    label: Mapped[str] = mapped_column(String(20))      
-    confidence: Mapped[float] = mapped_column(Float)      
-    threshold: Mapped[float] = mapped_column(Float)       
-    model_name: Mapped[str] = mapped_column(String(100)) 
+        DateTime, default=lambda: datetime.now(timezone.utc).replace(tzinfo=None))
+    filename: Mapped[str] = mapped_column(String(255))
+    label: Mapped[str] = mapped_column(String(20))
+    confidence: Mapped[float] = mapped_column(Float)
+    threshold: Mapped[float] = mapped_column(Float)
+    model_name: Mapped[str] = mapped_column(String(100))
     source: Mapped[str] = mapped_column(String(20), default="local")
 
 

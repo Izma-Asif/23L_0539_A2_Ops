@@ -61,7 +61,7 @@ def predict():
         return error_page(400, "Unsupported file type", "Please upload a JPG or PNG image.")
     filename = secure_filename(file.filename) or "upload"
 
-    data = file.read()     
+    data = file.read()
     try:
         Image.open(io.BytesIO(data)).verify()
     except (UnidentifiedImageError, OSError, SyntaxError, ValueError):
