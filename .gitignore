@@ -10,3 +10,5 @@ mlruns/
 .env
 mlflow.db
 mlartifacts/
+models/champion.keras
+models/_download/
