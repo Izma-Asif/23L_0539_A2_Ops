@@ -1,0 +1,15 @@
+.venv
+.git
+.env
+data/
+models/
+mlruns/
+mlartifacts/
+mlflow.db
+visionguard.db
+tuner_results/
+figures/
+reports/
+splits/
+__pycache__/
+*.pyc
