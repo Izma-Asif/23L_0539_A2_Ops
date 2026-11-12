@@ -1,0 +1,22 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, Segoe UI, Arial, sans-serif; background: #f4f6fa; color: #1c2434; }
+.nav { display: flex; justify-content: space-between; align-items: center; padding: 14px 28px; background: #1c2434; }
+.nav a { color: #fff; text-decoration: none; margin-left: 18px; }
+.nav .brand { font-weight: 700; font-size: 1.15rem; margin-left: 0; }
+.container { max-width: 900px; margin: 28px auto; padding: 0 16px; }
+.card { background: #fff; border-radius: 12px; padding: 28px; box-shadow: 0 2px 10px rgba(0,0,0,.08); }
+h1 { margin-top: 0; }
+.muted { color: #6b7385; }
+form { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-top: 18px; }
+button, .button { background: #3d5afe; color: #fff; border: 0; padding: 10px 18px; border-radius: 8px;
+  cursor: pointer; text-decoration: none; display: inline-block; font-size: 1rem; }
+.preview { max-width: 100%; max-height: 320px; border-radius: 8px; display: block; margin-bottom: 14px; }
+.verdict { font-size: 1.8rem; font-weight: 700; margin: 8px 0; }
+.verdict.ai, .tag.ai { color: #b3261e; }
+.verdict.real, .tag.real { color: #1b7f3b; }
+.tag { font-weight: 600; }
+.caveat { background: #fff8e1; border-left: 4px solid #f5b400; padding: 10px 14px; border-radius: 6px; }
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid #e3e7ef; white-space: nowrap; }
+th { background: #eef1f8; }

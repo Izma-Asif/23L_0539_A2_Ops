@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <h1>Result</h1>
+  <img class="preview" src="data:image/jpeg;base64,{{ preview }}" alt="Uploaded image preview">
+  <p class="verdict {{ 'ai' if label == 'AI-generated' else 'real' }}">{{ label }}</p>
+  <p>Confidence: <strong>{{ "%.1f"|format(confidence * 100) }}%</strong></p>
+  <p class="muted">File: {{ filename }} · Model: {{ model_name }} · Decision threshold: {{ threshold }}</p>
+  <p class="caveat">This is a statistical estimate, not proof. The model can be wrong, especially on
+    paintings, heavily edited photos and low-resolution images.</p>
+  <a class="button" href="{{ url_for('index') }}">Check another image</a>
+</section>
+{% endblock %}

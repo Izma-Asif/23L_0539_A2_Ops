@@ -12,3 +12,5 @@ mlflow.db
 mlartifacts/
 models/champion.keras
 models/_download/
+visionguard.db
+visionguard.db

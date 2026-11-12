@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}History · VisionGuard{% endblock %}
+{% block content %}
+<section class="card">
+  <h1>Prediction history</h1>
+  {% if rows %}
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>#</th><th>Time (UTC)</th><th>File</th><th>Verdict</th><th>Confidence</th><th>Threshold</th><th>Model</th><th>Source</th></tr></thead>
+      <tbody>
+      {% for r in rows %}
+        <tr>
+          <td>{{ r.id }}</td>
+          <td>{{ r.timestamp.strftime("%Y-%m-%d %H:%M:%S") }}</td>
+          <td>{{ r.filename }}</td>
+          <td><span class="tag {{ 'ai' if r.label == 'AI-generated' else 'real' }}">{{ r.label }}</span></td>
+          <td>{{ "%.1f"|format(r.confidence * 100) }}%</td>
+          <td>{{ r.threshold }}</td>
+          <td>{{ r.model_name }}</td>
+          <td>{{ r.source }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}
+  <p class="muted">No predictions yet. <a href="{{ url_for('index') }}">Upload an image</a> to get started.</p>
+  {% endif %}
+</section>
+{% endblock %}
